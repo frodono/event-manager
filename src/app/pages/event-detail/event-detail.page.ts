@@ -4,6 +4,8 @@ import { EventService } from '../../services/event/event.service';
 import { Plugins, CameraResultType } from '@capacitor/core';
 const { Camera } = Plugins;
 
+
+
 @Component({
   selector: 'app-event-detail',
   templateUrl: './event-detail.page.html',
@@ -82,7 +84,7 @@ export class EventDetailPage implements OnInit {
       });
       this.guestPicture = profilePicture.base64String.slice(23);
     } catch (error) {
-      console.error(error);
+      alert(error);
     }
   }
 }
